@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home - Eunice Kin Cortezano</title>
+    <link rel="stylesheet" href="index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo" aria-label="Home">EKC</a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h6>Hi, I'm</h6>
+            <h1>Eunice Kin Cortezano</h1>
+            <h5>Computer Science Student</h5>
+        </div>
+        <div class="home-img">
+            <img src="images/kin.jpg" alt="Portrait of Eunice Kin Cortezano">
+        </div>
+
+        <div class="btn-box">
+            <a href="cv.pdf" download>Download CV</a>
+            <a href="#contact">Contact Me</a>
+        </div>
+
+        <div class="home-sci">
+            <a href="https://facebook.com" title="Facebook" aria-label="Facebook"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="https://instagram.com" title="Instagram" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+            <a href="mailto:example@gmail.com" title="Email" aria-label="Email"><i class='bx bxl-gmail'></i></a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h1 class="abt-title">ABOUT ME</h1>
+                    <p>Hi, Welcome to my website portfolio! I'm Eunice Kin Cortezano, a first-year student, taking up the Bachelor of Science in Computer Science at Partido State University. You can call me Eunice or Kin, but not Eunice Kin. My dedication to learning motivates me to continue studying. I believe that the future belongs to those who believe in the beauty of their dreams.</p>
+                </div>
+                <div class="about-img">
+                    <img src="images/2.jpg" alt="Eunice Kin Cortezano">
+                </div>
+            </div>
+    
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+    
+            <div class="tab-contents active-tab" id="skills">
+                <ul class="tab-list">
+                    <li><span>C++ </span><br> Designing web/app interfaces</li>
+                    <li><span>CSS </span><br> Designing web/app interfaces</li>
+                    <li><span>HTML </span><br> Designing web/app interfaces</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul class="tab-list">
+                    <li><span>2018 </span><br> DR. DOMINGO G. ABCEDE ELEMENTARY SCHOOL</li>
+                    <li><span>2024 </span><br> RANGAS RAMOS NATIONAL HIGH SCHOOL</li>
+                    <li><span>2024 (present) </span><br> PARTIDO STATE UNIVERSITY</li>
+                </ul>
+            </div>            
+        </div>
+    </section>
+</body>
+</html>

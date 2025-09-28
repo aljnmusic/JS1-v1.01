@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: whitesmoke;
+    overflow: hidden; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #404040;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0.1rem;
+    margin: 0;
+    margin-inline: 1rem;
+}
+
+nav ul li {
+    margin-right: 1.5rem;
+    /* padding-top: 0.5rem; */
+}
+
+nav ul li:last-child{
+    margin-right: 0;
+}
+
+li{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3vh;
+    /* font-weight: bold; */
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+.container{
+    display: flex;
+    flex: 1;
+}
+
+section{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 50%;
+    border-radius: 5px;
+    /* border: 3px solid #CDC1FF; */
+    margin-left: 5%;
+    margin-bottom: 8%;
+}
+
+img:hover{
+    box-shadow: 0 0 25px #404040;
+}
+
+.container section, .container article{
+    flex: 1;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4vh;
+    font-weight: bolder;
+}
+
+.about{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about ul{
+    margin: 1rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.footer{
+    background-color: #404040;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 4vh;
+    bottom: 0;
+    width: 100%;
+    font-size: 2vh;
+    font-family: 'Courier New', Courier, monospace;
+    color: #FFF6E3;
+}

@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    /* overflow: hidden;  */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/1.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #71baee;
+    font-size: 3vh;
+    font-style: italic;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C6E7FF;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 7rem;
+    margin: 0 1rem;
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+nav ul li:last-child{
+    margin-right: 0;
+}
+
+li{
+    font-family: monospace;
+    font-size: 3vh;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    text-shadow: 0 0 2px black;
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+.container{
+    display: flex;
+    flex: 1;
+}
+
+section{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container{
+    flex: 1;
+}
+
+.sc1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sc1 p{
+    font-size: 3vh;
+    font-family: monospace;
+    margin-bottom: 2%;
+}
+
+img{
+    width: 25%;
+    height: auto;
+    /* border: 3px solid #CDC1FF; */
+    margin-bottom: 2%;
+    border-radius: 5px;
+}
+
+.sc2{
+    font-size: 4vh;
+    text-align: center;
+    margin-right: 5rem;
+    color: white;
+    text-shadow: 0 0 2px black;
+}
+
+@media  screen and (max-width: 480px) {
+    body{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        overflow: scroll;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .sc2{
+        font-size: 2vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+        position: absolute;
+        width: 100%;
+        top: 25%;
+        left: 0;
+    }
+
+    .sc1{
+        margin-bottom:5%;
+    }
+
+    .sc1 p{
+        margin-top: 5%;
+    }
+
+    .sc1 img{
+        width:35%;
+    }
+
+}
+
+.footer{
+    background-color: #C6E7FF;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4vh;
+    bottom: 0;
+    width: 100%;
+    font-size: 2vh;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+}

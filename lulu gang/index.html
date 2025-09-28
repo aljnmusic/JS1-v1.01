@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/images.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Lulu Gang</title>
+    <style>
+        .bg-ph-black {
+            background-color: #1b1b1b;
+        }
+        .text-ph-orange {
+            color: #ff9900;
+        }
+        .bg-ph-orange {
+            background-color: #ff9900;
+        }
+
+        .shadow-white {
+            box-shadow: 0 0 0 0.5px white;
+        }
+
+        body, html{
+          scroll-behavior: smooth;
+        }
+
+    </style>
+</head>
+<body class="relative w-full min-h-screen flex flex-col  bg-ph-black text-white">
+    <nav class="navbar z-10 bg-slate-700 fixed">
+        <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost btn-circle text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-ph-orange rounded-box z-[1] mt-3 w-42 p-2 shadow italic flex justify-center items-center">
+                <li class="hover:bg-black rounded-xl text-center"><a href="#home">Homepage</a></li>
+                <li class="hover:bg-black rounded-xl"><a href="#team">Our Team</a></li>
+                <li class="hover:bg-black rounded-xl"><a>Services</a></li>
+                <li class="hover:bg-black rounded-xl"><a>About</a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="navbar-end">
+            <div class="hover:btn px-2 mr-2 py-2 rounded hover:bg-ph-orange text-ph-orange font-semibold italic transition duration-300">Lulu Gang</div>
+        </div>
+
+        <div class="avatar online">
+            <div class="ring-primary ring-offset-base-100 w-10 rounded-full ring ring-offset-2">
+              <img src="img/5.jpg" alt="Avatar" />
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="w-full h-full">
+        <div class="hero bg-base-200 w-full mt-16 bg-ph-black">
+            <div class="hero-content flex flex-col lg:flex-row items-center lg:items-start h-full">
+              <img src="img/7.jpg" class="max-w-80 lg:max-w-sm md:max-w-md rounded-lg shadow-2xl shadow-white" alt="Hero Image"/>
+            <div class="lg:text-left lg:ml-8 text-center">
+                <h1 class="text-3xl font-bold text-ph-orange">Make it happen!</h1>
+                <p class="py-6 italic">
+                    We are the Lulu Gang. Where we provide amazing solutions and results to any projects you may need. With a team of dedicated and magnificent individuals, yes, we make it happen!
+                </p>
+                <button class="btn bg-ph-orange text-black">Get Started</button>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="w-full h-screen bg-ph-black grid grid-cols-2 grid-rows-2 gap-6 justify-center items-center mt-10 p-2">
+        <div class="card w-48 h-full bg-base-100 max-w-52 shadow-xl rounded-xl">
+            <figure>
+              <img
+                class="w-full h-full object-fit" src="img/2.jpg"
+                alt="Shoes" />
+            </figure>
+            <h2 class="card-title text-black font-bold italic text-base bg-ph-orange w-full h-10 flex justify-center items-center">Patitinan King</h2>
+        </div>
+
+        <div class="card w-48 h-56 bg-base-100 max-w-52 shadow-xl rounded-xl">
+            <figure>
+              <img
+                class="w-full" src="img/2.jpg"
+                alt="Shoes" />
+            </figure>
+            <h2 class="card-title text-black font-bold italic text-base bg-ph-orange w-full h-10 flex justify-center items-center">Patitinan King</h2>
+        </div>
+
+        <div class="card w-48 h-56 bg-base-100 max-w-52 shadow-xl rounded-xl">
+            <figure>
+              <img
+                class="w-full" src="img/2.jpg"
+                alt="Shoes" />
+            </figure>
+            <h2 class="card-title text-black font-bold italic text-base bg-ph-orange w-full h-10 flex justify-center items-center">Patitinan King</h2>
+        </div>
+
+        <div class="card w-48 h-56 bg-base-100 max-w-52 shadow-xl rounded-xl">
+            <figure>
+              <img
+                class="w-full" src="img/2.jpg"
+                alt="Shoes" />
+            </figure>
+            <h2 class="card-title text-black font-bold italic text-base bg-ph-orange w-full h-10 flex justify-center items-center">Patitinan King</h2>
+        </div>
+    </section>
+
+    <footer class="footer footer-center bg-slate-700 text-base-content p-4 text-white absolute bottom-0">
+        <aside>
+          <p>Copyright © 2024 - All right reserved by Lulu Gang</p>
+        </aside>
+    </footer>
+</body>
+</html>

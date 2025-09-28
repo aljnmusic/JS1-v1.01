@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    /* overflow: hidden;  */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: 	#FBA1B7;
+    color: whitesmoke;
+    font-size: 3vh;
+    font-style: italic;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFD1DA;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 7rem;
+    margin: 0 1rem;
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+nav ul li:last-child{
+    margin-right: 0;
+}
+
+li{
+    font-family: monospace;
+    font-size: 3vh;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+.container{
+    display: flex;
+    flex: 1;
+}
+
+section{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+img{
+    width: 90%;
+    height: 80vh;
+    /* border: 3px solid #CDC1FF; */
+    margin-bottom: 1%;
+    border-radius: 5px;
+}
+
+.container section, .container article{
+    flex: 1;
+}
+
+ article{
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FBA1B7;
+    text-shadow: 0 0 1px black;
+}
+
+span{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 5vh;
+    font-family: monospace;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+@media  screen and (max-width: 480px) {
+    span{
+        font-size: 1rem;
+        margin-top: 0;
+    }
+}
+
+.footer{
+    background-color: #FBA1B7;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 4vh;
+    bottom: 0;
+    width: 100%;
+    font-size: 2vh;
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
+}

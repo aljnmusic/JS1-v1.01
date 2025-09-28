@@ -1,0 +1,19 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#mybtn{
+    padding: 10px 20px;
+    background-color: lightblue;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 3em;
+}
+
+.mylabels{
+    font-size: 3em;
+}

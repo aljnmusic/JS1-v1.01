@@ -1,0 +1,72 @@
+Newbie
+to do - done
+calculator - done
+Weather
+countdown
+banco de aroro - done
+notescloud - done
+
+Mid
+Weather App
+Movie Search App
+Currency Converter
+Form Validation App
+Drum Kit / Piano App
+Memory Game (Card Match)
+Typing Speed Test
+Recipe Finder
+Bookmark Manager
+Stopwatch
+BMI Calculator
+Expense Tracker
+Quiz App with Timer
+Random Password Generator
+Pomodoro Timer
+Image Gallery with Lightbox
+Infinite Scroll App
+Accordion FAQ Section
+Local Storage CRUD App
+Unit Converter
+Number Guessing Game
+Scroll-to-Top Button
+Star Rating Component
+Slider with Auto and Manual Controls
+Digital Calculator
+Weather Forecast with Charts
+Geolocation Weather App
+Multi-step Form
+Image Upload and Preview
+Copy to Clipboard App
+
+
+Hard
+Chat App (with Firebase or WebSockets)
+Kanban Board (Drag and Drop)
+E-commerce Shopping Cart
+Drawing App (Canvas-based)
+Music Player
+Markdown Previewer
+Code Editor with Syntax Highlighting
+Custom Video Player
+Data Table with Sorting, Filtering, and Pagination
+Blog CMS (Markdown-based, with LocalStorage)
+Real-time Search App
+File Uploader with Progress Bar
+Interactive Quiz with Scoring and Timer
+Dashboard with Multiple Widgets (Weather, News, Clock, etc.)
+Image Editor (Crop, Resize, Filters)
+Calendar with Event Management
+Infinite Scroll News Feed
+Speech Recognition App
+Portfolio Generator (Input data, generate HTML/CSS)
+GitHub Profile Viewer (Fetch GitHub API)
+Real-time Chat Translation (using Web Speech + Translation APIs)
+Expense Tracker with Charts
+Custom Drag-and-Drop Form Builder
+Custom Theme Builder (Live CSS preview + export)
+Full-screen Photo Gallery with Lazy Loading
+Multi-language Translator App
+Progressive Web App (PWA) with Offline Support
+Resume Builder with PDF Export
+Custom JavaScript Framework (Mini React clone)
+Animation Builder using Canvas or Web Animations API
