@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Document</title>
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header class="bg-blue-600 text-white p-4 text-center">
@@ -13,8 +18,12 @@
 
     <main>
         <div class="flex flex-row mt-1">
-            <input type="text" class="w-full p-2 mb-0 border border-gray-300 rounded" placeholder="Enter city...">
-            <button class="w-1/2 p-2 border border-gray-300 rounded bg-blue-600">Search</button>
+            <input id="cityInput" type="text" class="w-full p-2 mb-0 border border-gray-300 rounded" placeholder="Enter city...">
+            <button id="searchButton" class="w-1/2 p-2 border border-gray-300 rounded bg-blue-600">Search</button>
+        </div>
+
+        <div id="weatherDisplay" class="mt-6 hidden">
+
         </div>
     </main>
 </body>
