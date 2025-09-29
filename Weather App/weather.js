@@ -1,5 +1,4 @@
 let cityInput = document.getElementById('cityInput');
-let searchBtn = document.getElementById('searchButton');
 let weatherDisplay = document.getElementById('weatherDisplay');
 let weatherForm = document.getElementById('weatherForm');
 const APIkeys = "18b91061574008796645bad5f9ec0ecb";
@@ -50,4 +49,11 @@ function displayWeatherInfo(data) {
     const humidityDisplay = document.createElement("p");
     const descDisplay = document.createElement("p");
     const weatherEmoji = document.createElement("p");
+
+    cityDisplay.textContent = city;
+    tempDisplay.textContent = `${(temp - 273.15).toFixed(1)}C`;
+
+
+    cityDisplay.classList.add("cityDisplay");
+    tempDisplay.classList.add("tempDisplay");
 }
