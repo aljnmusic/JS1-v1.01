@@ -8,6 +8,20 @@ const APIkeys = "18b91061574008796645bad5f9ec0ecb";
 weatherForm.addEventListener('submit', async event => {
     event.preventDefault();
 
+    const city = cityInput.value;
+
+    if(city){
+        try {
+            const weatherData = await getWeather(city);
+            displayWeatherInfo(weatherData);
+        } catch(error){
+            console.error(error);
+            displayError(error);
+        }
+    }
+    else{
+        throw new Error("Please enter your city");
+    }
 
 
 })
@@ -23,4 +37,8 @@ async function getWeather(city) {
     }
 
     return response.json();
+}
+
+function displayWeatherInfo(data) {
+    const {name: city, main: {temp, humidity}, weather: [{description, id}]} = data;
 }
