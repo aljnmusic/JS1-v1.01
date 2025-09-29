@@ -13,6 +13,7 @@ weatherForm.addEventListener('submit', async event => {
         try {
             const weatherData = await getWeather(city);
             displayWeatherInfo(weatherData);
+            console.log("Form submitted");
         } catch(error){
             console.error(error);
             displayError(error);
@@ -50,10 +51,19 @@ function displayWeatherInfo(data) {
     const descDisplay = document.createElement("p");
     const weatherEmoji = document.createElement("p");
 
-    cityDisplay.textContent = city;
-    tempDisplay.textContent = `${(temp - 273.15).toFixed(1)}C`;
+    cityDisplay.textContent = `City: ${city}`;
+    tempDisplay.textContent = `Temperature: ${(temp - 273.15).toFixed(1)}C`;
+    humidityDisplay.textContent = `Humidity: ${humidity}%`;
+    descDisplay.textContent = `Description: ${(description).toUpperCase()}`;
 
 
     cityDisplay.classList.add("cityDisplay");
     tempDisplay.classList.add("tempDisplay");
+    humidityDisplay.classList.add("humidityDisplay");
+    descDisplay.classList.add("descDisplay");
+
+    weatherDisplay.appendChild(cityDisplay);
+    weatherDisplay.appendChild(tempDisplay);
+    weatherDisplay.appendChild(humidityDisplay);
+    weatherDisplay.appendChild(descDisplay);
 }
