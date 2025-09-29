@@ -7,7 +7,7 @@ banco de aroro - done
 notescloud - done
 
 Mid
-Weather App
+Weather App - done 9/29
 Movie Search App
 Currency Converter
 Form Validation App
