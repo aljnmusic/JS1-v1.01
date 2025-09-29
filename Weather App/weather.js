@@ -72,17 +72,17 @@ function displayWeatherInfo(data) {
 
 function getWeatherEmoji(weatherId){
     if(weatherId >= 200 && weatherId <= 299)
-        return "⚡";
+        return "⚡⚡⚡";
     else if(weatherId >= 300 && weatherId <= 399)
-        return "🌧️";
+        return "🌧️🌧️🌧️";
     else if(weatherId >= 500 && weatherId <= 599)
-        return "🌧️";
-    else if(weatherID >= 600 && weatherId <= 699)
-        return "❄️";
+        return "🌧️🌧️🌧️";
+    else if(weatherId >= 600 && weatherId <= 699)
+        return "❄️❄️❄️";
     else if(weatherId === 800)
-        return "☀️";
+        return "☀️☀️☀️";
     else if(weatherId >= 801 && weatherId <= 899)
-        return "🌤️";
+        return "🌤️🌤️🌤️";
     else
-        return "🌥️";
+        return "🌥️🌥️🌥️";
 }
