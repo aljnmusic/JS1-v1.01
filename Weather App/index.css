@@ -1,11 +1,15 @@
-.cityDisplay, .tempDisplay, .humidityDisplay, .descDisplay {
+.cityDisplay, .tempDisplay, .humidityDisplay, .descDisplay, .weatherEmoji {
     font-size: 2.5rem;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.521);
+    font-family:  mono;
+    color: black;
     margin-bottom: 20px;
 }
 
 #weatherDisplay{
     display: flex;
     flex-direction: column;
+    text-align: center;
+    height: 100%;
 }
+

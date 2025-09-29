@@ -62,6 +62,7 @@ function displayWeatherInfo(data) {
     tempDisplay.classList.add("tempDisplay");
     humidityDisplay.classList.add("humidityDisplay");
     descDisplay.classList.add("descDisplay");
+    weatherEmoji.classList.add("weatherEmoji");
 
     weatherDisplay.appendChild(cityDisplay);
     weatherDisplay.appendChild(tempDisplay);
