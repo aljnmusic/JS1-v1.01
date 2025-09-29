@@ -67,8 +67,22 @@ function displayWeatherInfo(data) {
     weatherDisplay.appendChild(tempDisplay);
     weatherDisplay.appendChild(humidityDisplay);
     weatherDisplay.appendChild(descDisplay);
+    weatherDisplay.appendChild(weatherEmoji);
 }
 
 function getWeatherEmoji(weatherId){
-
+    if(weatherId >= 200 && weatherId <= 299)
+        return "⚡";
+    else if(weatherId >= 300 && weatherId <= 399)
+        return "🌧️";
+    else if(weatherId >= 500 && weatherId <= 599)
+        return "🌧️";
+    else if(weatherID >= 600 && weatherId <= 699)
+        return "❄️";
+    else if(weatherId === 800)
+        return "☀️";
+    else if(weatherId >= 801 && weatherId <= 899)
+        return "🌤️";
+    else
+        return "🌥️";
 }
