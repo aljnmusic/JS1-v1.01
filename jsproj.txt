@@ -6,7 +6,7 @@ countdown
 banco de aroro - done
 notescloud - done
 
-Mid
+----Mid----
 Weather App - done 9/29
 Movie Search App
 Currency Converter
@@ -39,7 +39,7 @@ Image Upload and Preview
 Copy to Clipboard App
 
 
-Hard
+----Hard----
 Chat App (with Firebase or WebSockets)
 Kanban Board (Drag and Drop)
 E-commerce Shopping Cart
