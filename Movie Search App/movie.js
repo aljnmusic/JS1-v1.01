@@ -22,6 +22,21 @@ formEl.addEventListener("submit", async event  => {
                 const { title, overview, release_date, poster_path, vote_average } = movieResult;
 
 
+                const movieDiv = document.createElement('div');
+                movieDiv.classList.add('movieDiv', 'p-4', 'bg-white', 'mb-4', 'rounded', 'shadow-lg');
+
+                movieDiv.innerHTML = `
+                    <h3>${title}</h3>
+                    <p>${overview}</p>
+                    <p>${release_date}</p>
+                    <p>${vote_average}</p>
+                    <img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="${title}" />
+                    
+                
+                `;
+
+                displayEl.appendChild(movieDiv);
+
             })
 
         } catch(e){
@@ -43,7 +58,9 @@ async function getMovie(movie){
         throw new Error("Cant fetch data")
     }
 
-    return response.json();
+    const data = await response.json();
+
+    return data.results;
 }
 
 // function displayMovieInfo(movie){
