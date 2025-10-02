@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Movie Search App</title>
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<header class="bg-blue-600 text-white p-4 text-center">
+    <h1 class="text-2xl font-bold">Weather App</h1>
+</header>
+
+<main>
+    <form id="movieForm" class="flex flex-row mt-1">
+        <input id="movieInput" type="text" class="w-full p-2 mb-0 border border-gray-300 rounded" placeholder="Enter city...">
+        <button id="searchButton" class="w-1/2 p-2 border border-gray-300 rounded bg-blue-600">Search</button>
+    </form>
+
+    <div id="movieDisplay" class="mt-6 hidden border border-blue-300 rounded mx-2 h-full bg-gray-200">
+
+    </div>
+</main>
+
+<script src="weather.js"></script>
+</body>
+</html>
