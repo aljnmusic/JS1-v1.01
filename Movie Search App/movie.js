@@ -69,5 +69,6 @@ clearEl.addEventListener('click', clearSearch)
 function clearSearch(){
     inputEl.value = '';
     displayEl.innerHTML = '';
+    displayEl.classList.add('block');
 }
 
