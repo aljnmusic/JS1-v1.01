@@ -19,12 +19,25 @@ formEl.addEventListener("submit", async event  => {
 
             displayEl.innerHTML = '';
 
+            const defaultImg = document.getElementById('rey');
+            if (defaultImg) {
+                defaultImg.classList.add('hidden');
+            }
+
             movieData.forEach(movieResult => {
                 const { title, overview, release_date, poster_path, vote_average } = movieResult;
 
 
                 const movieDiv = document.createElement('div');
-                movieDiv.classList.add('movieDiv', 'p-4', 'bg-white', 'mb-4', 'rounded', 'shadow-lg');
+                movieDiv.classList.add(    'movieDiv',
+                    'p-6',              // Padding 1.5rem
+                    'bg-white',
+                    'mb-4',
+                    'rounded',
+                    'shadow-lg',
+                    'grid',             // Set display to grid
+                    'gap-6',            // Gap of 1.5rem
+                    'grid-cols-3');
 
                 movieDiv.innerHTML = `
                     <h3 class="font-bold">${title}</h3>
@@ -68,7 +81,21 @@ clearEl.addEventListener('click', clearSearch)
 
 function clearSearch(){
     inputEl.value = '';
+
+    const defaultImg = document.getElementById('rey');
+
+    // 1. Clear the results area (which deletes the image if it was inside)
     displayEl.innerHTML = '';
-    displayEl.classList.add('block');
+
+    if (defaultImg) {
+        // 2. Append the image back to the display container
+        displayEl.appendChild(defaultImg);
+
+        // 3. REMOVE the 'hidden' class (as used in the submit handler)
+        defaultImg.classList.remove('hidden');
+
+        // 4. Force the display to 'block' (to override any other inline or default style)
+        defaultImg.style.display = 'hidden';
+    }
 }
 

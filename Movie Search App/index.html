@@ -6,10 +6,6 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <title>Aroro Movie Search App</title>
-    <style>
-        .hidden{
-            display: none;
-        }
     </style>
 </head>
 <body>
@@ -24,8 +20,15 @@
         <button id="clearButton" class="w-1/4 p-2 border border-gray-300 rounded bg-blue-600">Clear</button>
     </form>
 
-    <div id="movieDisplay" class="mt-32 border border-blue-300 rounded mx-2 h-full bg-gray-200">
-        <img id="defaultImage" src="img/rey.png">
+    <div id="movieDisplay" class="mt-32 border border-blue-300 rounded mx-2 h-full bg-gray-200 p-6
+    bg-white
+    mb-4
+    rounded
+    shadow-lg
+    grid
+    gap-6
+    lg:grid-cols-3">
+        <img id="rey" src="./img/rey.png" alt="rey">
     </div>
 </main>
 
