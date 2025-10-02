@@ -14,6 +14,16 @@ formEl.addEventListener("submit", async event  => {
         try{
             const movieData = await getMovie(movie);
             console.log("Submitted");
+            console.log(movieData);
+
+            displayEl.innerHTML = '';
+
+            movieData.forEach(movieResult => {
+                const { title, overview, release_date, poster_path, vote_average } = movieResult;
+
+
+            })
+
         } catch(e){
             console.error(e);
 
@@ -35,4 +45,8 @@ async function getMovie(movie){
 
     return response.json();
 }
+
+// function displayMovieInfo(movie){
+//     const {}
+// }
 
