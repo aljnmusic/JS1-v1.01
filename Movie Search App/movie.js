@@ -1,6 +1,7 @@
 let formEl = document.getElementById('movieForm');
 let inputEl = document.getElementById('movieInput');
 let displayEl = document.getElementById('movieDisplay');
+let clearEl = document.getElementById('clearButton');
 const APIkeys = "8dccd3adfe5180eaeb6ee68440f24b02";
 
 
@@ -63,7 +64,10 @@ async function getMovie(movie){
     return data.results;
 }
 
-// function displayMovieInfo(movie){
-//     const {}
-// }
+clearEl.addEventListener('click', clearSearch)
+
+function clearSearch(){
+    inputEl.value = '';
+    displayEl.innerHTML = '';
+}
 

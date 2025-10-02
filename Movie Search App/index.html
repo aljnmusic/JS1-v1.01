@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <title>Movie Search App</title>
+    <title>Aroro Movie Search App</title>
     <style>
         .hidden{
             display: none;
@@ -14,13 +14,14 @@
 </head>
 <body>
 <header class="bg-blue-600 text-white p-4 text-center fixed w-full top-0">
-    <h1 class="text-2xl font-bold">Movie Search</h1>
+    <h1 class="text-2xl font-bold">Aroro Movie Search</h1>
 </header>
 
 <main>
     <form id="movieForm" class="flex flex-row mt-1 fixed w-full top-16">
         <input id="movieInput" type="text" class="w-full p-2 mb-0 border border-gray-300 rounded" placeholder="Enter movie title...">
-        <button id="searchButton" class="w-1/2 p-2 border border-gray-300 rounded bg-blue-600">Search</button>
+        <button id="searchButton" class="w-1/4 p-2 border border-gray-300 rounded bg-blue-600">Search</button>
+        <button id="clearButton" class="w-1/4 p-2 border border-gray-300 rounded bg-blue-600">Clear</button>
     </form>
 
     <div id="movieDisplay" class="mt-32 border border-blue-300 rounded mx-2 h-full bg-gray-200">
