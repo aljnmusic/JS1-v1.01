@@ -26,10 +26,10 @@ formEl.addEventListener("submit", async event  => {
                 movieDiv.classList.add('movieDiv', 'p-4', 'bg-white', 'mb-4', 'rounded', 'shadow-lg');
 
                 movieDiv.innerHTML = `
-                    <h3>${title}</h3>
-                    <p>${overview}</p>
-                    <p>${release_date}</p>
-                    <p>${vote_average}</p>
+                    <h3 class="font-bold">${title}</h3>
+                    <p class="italic">${overview}</p>
+                    <p class="font-bold">Realease Date: ${release_date}</p>
+                    <p class="font-bold">Vote: ${vote_average}</p>
                     <img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="${title}" />
                     
                 
