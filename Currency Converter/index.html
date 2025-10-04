@@ -1,11 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <title>Currency Converter</title>
+    <style>
+        .hidden{
+            display:  none;
+        }
     </style>
 </head>
 <body>
@@ -14,13 +18,13 @@
 </header>
 
 <main>
-    <form id="curr" class="flex flex-row mt-1 fixed w-full top-16 px-1">
-        <input id="movieInput" type="text" class="w-full p-2 mb-0 border border-gray-300 rounded" placeholder="Enter movie title...">
-        <button id="searchButton" class="w-1/4 p-2 border border-gray-300 rounded bg-blue-600">Search</button>
-        <button id="clearButton" class="w-1/4 p-2 border border-gray-300 rounded bg-blue-600">Clear</button>
+    <form id="currForm" class="flex flex-row mt-1 fixed w-full top-16 px-1">
+        <input id="currInput" type="text" class="w-full p-2 mb-0 border border-gray-300 rounded" placeholder="Enter currency...">
+        <button id="convertButton" class="w-1/4 p-2 border border-gray-300 rounded bg-blue-600 font-bold text-white">Convert</button>
+        <button id="clearButton" class="w-1/4 p-2 border border-gray-300 rounded bg-red-600 font-bold text-white">Clear</button>
     </form>
 
-    <div id="movieDisplay" class="mt-32 border border-blue-300 rounded mx-2 h-full bg-gray-100 p-6">
+    <div id="movieDisplay" class="hidden mt-32 border border-blue-300 rounded mx-2 h-full bg-gray-100 p-6">
 
     </div>
 </main>
