@@ -8,7 +8,7 @@ notescloud - done
 
 ----Mid----
 Weather App - done 9/29
-Movie Search App
+Movie Search App - done 10 / 2
 Currency Converter
 Form Validation App
 Drum Kit / Piano App
