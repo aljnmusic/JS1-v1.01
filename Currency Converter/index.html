@@ -21,16 +21,16 @@
     <form id="currForm" class="flex flex-col mt-1 fixed w-full top-16 px-1">
         <div class="flex flex-row w-full">
             <input id="currInput" type="text" class="w-full p-2 mb-0 border border-gray-300 rounded" placeholder="Enter currency...">
-            <button id="convertButton" class="w-1/4 p-2 border border-gray-300 rounded bg-blue-600 font-bold text-white">Convert</button>
-            <button id="clearButton" class="w-1/4 p-2 border border-gray-300 rounded bg-red-600 font-bold text-white">Clear</button>
+            <button id="convertButton" class="w-1/4 p-2 border border-gray-300 rounded bg-blue-600 hover:bg-blue-800 font-bold text-white">Convert</button>
+            <button id="clearButton" class="w-1/4 p-2 border border-gray-300 rounded bg-red-500 hover:bg-red-600 font-bold text-white">Clear</button>
         </div>
-        <div id="dropdown" class="w-full bg-red-500 mt-1 rounded">
-            <div id="dropdownContent" class="text-center p-2">
+        <div id="dropdown" class="w-full bg-green-500 hover:bg-green-600 mt-1 rounded">
+            <div id="dropdownContent" class="text-center p-2 font-bold text-white font-serif">
                 <p>Select Currency</p>
                 <div id="dropdownList" class="hidden">
-                    <ul>
-                        <li>USD</li>
-                        <li>DJK</li>
+                    <ul id="currencies">
+                        <li id="usd">USD</li>
+                        <li id="djk">DJK</li>
                     </ul>
                 </div>
             </div>
