@@ -30,13 +30,13 @@ formEl.addEventListener("submit", async event  => {
 
                 const movieDiv = document.createElement('div');
                 movieDiv.classList.add(    'movieDiv',
-                    'p-6',              // Padding 1.5rem
+                    'p-6',
                     'bg-white',
                     'mb-4',
                     'rounded',
                     'shadow-lg',
-                    'grid',             // Set display to grid
-                    'gap-6',            // Gap of 1.5rem
+                    'grid',
+                    'gap-6',
                     'grid-cols-3');
 
                 movieDiv.innerHTML = `
