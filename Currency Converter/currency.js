@@ -19,7 +19,7 @@
 
         let amount = Number(inputEl.value)
 
-        if(selectedCurrency === 'USD') {
+        if(selectedCurrency === 'USD - US Dollars') {
 
             displayEl.classList.remove('hidden')
             displayEl.innerHTML = ''
@@ -29,7 +29,7 @@
             resultP.textContent = `${amount} Php to ${selectedCurrency} is ${(amount * 0.01717).toFixed(2)}`
 
             displayEl.appendChild(resultP)
-        } else if(selectedCurrency === 'EUR') {
+        } else if(selectedCurrency === 'EUR - European Dollars') {
 
             displayEl.classList.remove('hidden')
             displayEl.innerHTML = ''
@@ -39,7 +39,7 @@
             resultP.textContent = `${amount} Php to ${selectedCurrency} is ${(amount * 0.015).toFixed(2)}`
 
             displayEl.appendChild(resultP)
-        } else if(selectedCurrency === 'JPY') {
+        } else if(selectedCurrency === 'JPY - Japanese Yen') {
             displayEl.classList.remove('hidden')
             displayEl.innerHTML = ''
 
@@ -48,7 +48,7 @@
             resultP.textContent = `${amount} Php to ${selectedCurrency} is ${(amount * 2.58).toFixed(2)}`
 
             displayEl.appendChild(resultP)
-        } else if(selectedCurrency === 'SGD') {
+        } else if(selectedCurrency === 'SGD - Singapore Dollar') {
             displayEl.classList.remove('hidden')
             displayEl.innerHTML = ''
 
@@ -57,7 +57,7 @@
             resultP.textContent = `${amount} Php to ${selectedCurrency} is ${(amount * 0.0222).toFixed(2)}`
 
             displayEl.appendChild(resultP)
-        } else if(selectedCurrency === 'SAR') {
+        } else if(selectedCurrency === 'SAR - Saudi Riyal') {
             displayEl.classList.remove('hidden')
             displayEl.innerHTML = ''
 
@@ -66,7 +66,7 @@
             resultP.textContent = `${amount} Php to ${selectedCurrency} is ${(amount * 6.44).toFixed(2)}`
 
             displayEl.appendChild(resultP)
-        } else if(selectedCurrency === 'AED') {
+        } else if(selectedCurrency === 'AED - United Arab Emirates Dirham') {
             displayEl.classList.remove('hidden')
             displayEl.innerHTML = ''
 
