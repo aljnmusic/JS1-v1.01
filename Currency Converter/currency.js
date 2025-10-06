@@ -4,6 +4,7 @@
     let clearBtn = document.getElementById('clearButton')
     let dropdownEl =  document.getElementById('dropdownContent')
     let selected = document.getElementById('selected')
+    let displayEl = document.getElementById('currDisplay')
 
 
     formEl.addEventListener('submit', (event)=>{
@@ -19,7 +20,34 @@
         let amount = Number(inputEl.value)
 
         if(selectedCurrency === 'USD') {
-            console.log(`Current Amount: ${(amount * 0.01717).toFixed(2)}`)
+
+            displayEl.classList.remove('hidden')
+            displayEl.innerHTML = ''
+
+            let resultP = document.createElement('p')
+
+            resultP.textContent = `${amount} Php to ${selectedCurrency} is ${(amount * 0.01717).toFixed(2)}`
+
+            displayEl.appendChild(resultP)
+        } else if(selectedCurrency === 'EUR') {
+
+            displayEl.classList.remove('hidden')
+            displayEl.innerHTML = ''
+
+            let resultP = document.createElement('p')
+
+            resultP.textContent = `${amount} Php to ${selectedCurrency} is ${(amount * 0.015).toFixed(2)}`
+
+            displayEl.appendChild(resultP)
+        } else if(selectedCurrency === 'JPY') {
+            displayEl.classList.remove('hidden')
+            displayEl.innerHTML = ''
+
+            let resultP = document.createElement('p')
+
+            resultP.textContent = `${amount} Php to ${selectedCurrency} is ${(amount * 2.58).toFixed(2)}`
+
+            displayEl.appendChild(resultP)
         }
 
     })
