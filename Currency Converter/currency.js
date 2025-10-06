@@ -101,17 +101,12 @@
             })
         })
 
-
-        // let currencyItems = document.querySelectorAll('#currencies li')
-        //
-        // currencyItems.forEach(item => {
-        //     let selectedItem = item.textContent
-        //
-        //     selected.textContent = selectedItem
-        //
-        //     inputEl.textContent = `Enter amount in ${selectedItem}`
-        //
-        //     dropdownEl.classList.remove('hidden')
-        // })
-
     })
+
+clearBtn.addEventListener('click', (event)=>{
+    event.preventDefault()
+
+    inputEl.value = ''
+    displayEl.classList.add('hidden')
+    selected.textContent = 'Select Currency'
+})
