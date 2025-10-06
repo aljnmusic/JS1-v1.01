@@ -48,6 +48,33 @@
             resultP.textContent = `${amount} Php to ${selectedCurrency} is ${(amount * 2.58).toFixed(2)}`
 
             displayEl.appendChild(resultP)
+        } else if(selectedCurrency === 'SGD') {
+            displayEl.classList.remove('hidden')
+            displayEl.innerHTML = ''
+
+            let resultP = document.createElement('p')
+
+            resultP.textContent = `${amount} Php to ${selectedCurrency} is ${(amount * 0.0222).toFixed(2)}`
+
+            displayEl.appendChild(resultP)
+        } else if(selectedCurrency === 'SAR') {
+            displayEl.classList.remove('hidden')
+            displayEl.innerHTML = ''
+
+            let resultP = document.createElement('p')
+
+            resultP.textContent = `${amount} Php to ${selectedCurrency} is ${(amount * 6.44).toFixed(2)}`
+
+            displayEl.appendChild(resultP)
+        } else if(selectedCurrency === 'AED') {
+            displayEl.classList.remove('hidden')
+            displayEl.innerHTML = ''
+
+            let resultP = document.createElement('p')
+
+            resultP.textContent = `${amount} Php to ${selectedCurrency} is ${(amount * 6.31).toFixed(2)}`
+
+            displayEl.appendChild(resultP)
         }
 
     })
