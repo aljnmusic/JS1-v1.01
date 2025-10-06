@@ -23,4 +23,13 @@ dropdownEl.addEventListener('click', (event)=>{
         list.classList.add('hidden')
     }
 
+    let currencyItems = document.querySelectorAll('#currencies li')
+
+    currencyItems.forEach(item => {
+        let selectedItem = item.textContent
+        let selected = document.getElementById('selected')
+
+        selected.textContent = selectedItem
+    })
+
 })
