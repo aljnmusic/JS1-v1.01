@@ -9,7 +9,18 @@
     formEl.addEventListener('submit', (event)=>{
         event.preventDefault()
 
+        let selectedCurrency = selected.textContent
 
+        if(selectedCurrency === 'Select Currency') {
+            alert("Please Select a Currency!")
+            return;
+        }
+
+        let amount = Number(inputEl.value)
+
+        if(selectedCurrency === 'USD') {
+            console.log(`Current Amount: ${(amount * 0.01717).toFixed(2)}`)
+        }
 
     })
 
@@ -30,6 +41,8 @@
                 event.preventDefault()
 
                 selected.textContent = item.textContent
+
+
             })
         })
 
