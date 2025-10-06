@@ -1,0 +1,5 @@
+let formEl = document.getElementById('currForm')
+let inputEl = document.getElementById('currInput')
+let convertBtn = document.getElementById('convertButton')
+let clearBtn = document.getElementById('clearButton')
+let dropdownEl =  document.getElementById('dropdown')
