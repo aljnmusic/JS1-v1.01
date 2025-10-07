@@ -13,5 +13,10 @@ function validateName(){
 }
 
 function validateEmail(){
-    let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/
+    let errorMessage = document.getElementById('error');
+
+    if(emailInput === ''){
+        errorMessage.textContent = 'Email is required';
+    } else if(emailInput.length < 3){}
 }
