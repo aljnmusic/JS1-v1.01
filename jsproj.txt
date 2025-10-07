@@ -9,7 +9,7 @@ notescloud - done
 ----Mid----
 Weather App - done 9/29
 Movie Search App - done 10 / 2
-Currency Converter
+Currency Converter - done 10 / 6
 Form Validation App
 Drum Kit / Piano App
 Memory Game (Card Match)
