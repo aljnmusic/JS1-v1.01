@@ -9,7 +9,12 @@ function validateName(){
 
     if(nameInput.value === ''){
         errorMessage.textContent = 'Name is required';
+        return false;
+    } else {
+        errorMessage.textContent = '';
+        return true;
     }
+
 }
 
 function validateEmail(){
@@ -18,28 +23,48 @@ function validateEmail(){
 
     if(emailInput.value === ''){
         errorMessage.textContent = 'Email is required';
+        return false
     } else if(!emailPattern.test(emailInput.value)){
         errorMessage.textContent = 'Invalid email address';
+        return false;
+    } else{
+        errorMessage.textContent = '';
+        return true;
     }
 }
 
 function validatePassword(){
+    let passPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$/;
     let pass = '1234'
-    let errorMessage = document.getElementById('error');
+    let errorMessage = document.getElementById('errorPassword');
 
     if(passwordInput.value === ''){
         errorMessage.textContent = 'Password is required';
-    }
-
-    if(!pass.test(passwordInput.value)){
+        return false;
+    } else if(!passPattern.test(passwordInput.value)){
         errorMessage.textContent = 'Invalid password';
+        return false;
+    } else {
+        errorMessage.textContent = '';
+        return true;
     }
 }
 
 formEl.addEventListener('submit', (event)=>{
     event.preventDefault();
 
-    validateName();
-    validateEmail();
-    validatePassword();
+    let isValid = true;
+
+    isValid &= validateName();
+    isValid &= validateEmail();
+    isValid &= validatePassword();
+
+    let message =  document.getElementById('submitMessage');
+
+    if(isValid){
+        console.log("Submitting");
+        message.textContent = 'Submitting';
+    } else {
+        message.textContent = '';
+    }
 });
