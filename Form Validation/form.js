@@ -18,5 +18,22 @@ function validateEmail(){
 
     if(emailInput === ''){
         errorMessage.textContent = 'Email is required';
-    } else if(emailInput.length < 3){}
+    } else if(emailInput !== emailPattern){
+        errorMessage.textContent = 'Invalid email address';
+    }
 }
+
+function validatePassword(){
+    let pass = '1234'
+    let errorMessage = document.getElementById('error');
+
+    if(passwordInput === ''){
+        errorMessage.textContent = 'Password is required';
+    }
+
+    if(passwordInput !== pass){
+        errorMessage.textContent = 'Invalid password';
+    }
+}
+
+formEl
