@@ -34,20 +34,24 @@ function validateEmail(){
 }
 
 function validatePassword(){
-    let passPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$/;
-    let pass = '1234'
-    let errorMessage = document.getElementById('errorPassword');
+        let passPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$/;
+        let pass = '1234Galos'
+        let errorMessage = document.getElementById('errorPassword');
 
-    if(passwordInput.value === ''){
-        errorMessage.textContent = 'Password is required';
-        return false;
-    } else if(!passPattern.test(passwordInput.value)){
-        errorMessage.textContent = 'Invalid password';
-        return false;
-    } else {
+        if(passwordInput.value === '') {
+            errorMessage.textContent = 'Password is required';
+            return false;
+        }
+
+        // Check if password passes the regex (at least 1 letter, 1 digit, 4+ characters)
+        if(!passPattern.test(passwordInput.value) && passwordInput.value !== pass) {
+            errorMessage.textContent = 'Invalid password';
+            return false;
+        }
+
+        // If the password is valid according to regex or matches '1234Galos', clear the error
         errorMessage.textContent = '';
         return true;
-    }
 }
 
 formEl.addEventListener('submit', (event)=>{
@@ -65,6 +69,6 @@ formEl.addEventListener('submit', (event)=>{
         console.log("Submitting");
         message.textContent = 'Submitting';
     } else {
-        message.textContent = '';
+        message.textContent = 'Please fix the error';
     }
 });
