@@ -36,4 +36,10 @@ function validatePassword(){
     }
 }
 
-formEl
+formEl.addEventListener('submit', (event)=>{
+    event.preventDefault();
+
+    validateName();
+    validateEmail();
+    validatePassword();
+});
