@@ -108,4 +108,4 @@ document.addEventListener('keyup', event => {
         default:
             break;
     }
-});
+})
