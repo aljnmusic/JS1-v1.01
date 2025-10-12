@@ -6,12 +6,22 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Drum Kit</title>
 </head>
-<body class="min-h-screen">
+<body class="min-h-screen flex flex-col">
+<header class="bg-gray-600 text-white p-4 text-center text-3xl font-bold">
+    Drum Kit
+</header>
 
-
-
-
-
+<div class=" flex-grow grid grid-cols-3 gap-2 text-white font-bold font-mono text-xl">
+    <div class="flex items-center justify-center bg-blue-500">Clap</div>
+    <div class="flex items-center justify-center bg-green-500">Cymbal</div>
+    <div class="flex items-center justify-center bg-yellow-500">Hihat</div>
+    <div class="flex items-center justify-center bg-purple-500">Kick</div>
+    <div class="flex items-center justify-center bg-orange-500 bg-blue-200">Percussion</div> <!-- Explicitly setting bg-orange-500 -->
+    <div class="flex items-center justify-center bg-pink-500">Rimshot</div>
+    <div class="flex items-center justify-center bg-teal-500 bg-red-300">Snap</div> <!-- Explicitly setting bg-teal-500 -->
+    <div class="flex items-center justify-center bg-indigo-500">Snare</div>
+    <div class="flex items-center justify-center bg-gray-500">Stomp</div>
+</div>
 
 
 
