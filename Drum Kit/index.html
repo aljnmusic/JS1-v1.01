@@ -12,17 +12,26 @@
 </header>
 
 <div class=" flex-grow grid grid-cols-3 gap-2 text-white font-bold font-mono text-xl">
-    <div class="flex items-center justify-center bg-blue-500">Clap</div>
-    <div class="flex items-center justify-center bg-green-500">Cymbal</div>
-    <div class="flex items-center justify-center bg-yellow-500">Hihat</div>
-    <div class="flex items-center justify-center bg-purple-500">Kick</div>
-    <div class="flex items-center justify-center bg-orange-500 bg-blue-200">Percussion</div>
-    <div class="flex items-center justify-center bg-pink-500">Rimshot</div>
-    <div class="flex items-center justify-center bg-teal-500 bg-red-300">Snap</div> <!-- Explicitly setting bg-teal-500 -->
-    <div class="flex items-center justify-center bg-indigo-500">Snare</div>
-    <div class="flex items-center justify-center bg-gray-500">Stomp</div>
+    <div class="flex items-center justify-center bg-blue-500" id="clap">Clap</div>
+    <div class="flex items-center justify-center bg-green-500" id="cymbal">Cymbal</div>
+    <div class="flex items-center justify-center bg-yellow-500" id="hihat">Hihat</div>
+    <div class="flex items-center justify-center bg-purple-500" id="kick">Kick</div>
+    <div class="flex items-center justify-center bg-orange-500 bg-blue-200" id="percussion">Percussion</div>
+    <div class="flex items-center justify-center bg-pink-500" id="rimshot">Rimshot</div>
+    <div class="flex items-center justify-center bg-teal-500 bg-red-300" id="snap">Snap</div>
+    <div class="flex items-center justify-center bg-indigo-500" id="snare">Snare</div>
+    <div class="flex items-center justify-center bg-gray-500" id="stomp">Stomp</div>
 </div>
 
+<audio data-key="audio-clap" src="sounds/Clap.wav"></audio>
+<audio data-key="audio-cymbal" src="sounds/Cymbals.wav"></audio>
+<audio data-key="audio-hihat" src="sounds/Hihat.wav"></audio>
+<audio data-key="audio-kick" src="sounds/Kick.wav"></audio>
+<audio data-key="audio-percussion" src="sounds/Percussion.wav"></audio>
+<audio data-key="audio-rimshot" src="sounds/Rimshot.wav"></audio>
+<audio data-key="audio-snap" src="sounds/Snap.wav"></audio>
+<audio data-key="audio-snare" src="sounds/Snare.wav"></audio>
+<audio data-key="audio-stomp" src="sounds/Stomp.wav"></audio>
 
 
 <script src="form.js"></script>
