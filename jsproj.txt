@@ -10,7 +10,7 @@ notescloud - done
 Weather App - done 9/29
 Movie Search App - done 10 / 2
 Currency Converter - done 10 / 6
-Form Validation App
+Form Validation App - done 10 / 10
 Drum Kit / Piano App
 Memory Game (Card Match)
 Typing Speed Test
