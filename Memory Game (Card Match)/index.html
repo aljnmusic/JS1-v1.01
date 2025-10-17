@@ -8,15 +8,24 @@
     <link rel="stylesheet" href="card.css">
 </head>
 <body class="min-h-screen flex flex-col">
+
+
 <header class="bg-gray-600 text-white p-4 text-center">
     <h1 class="text-2xl font-bold">Memory Game</h1>
 </header>
 
-<div id="grid" class="">
 
-</div>
+<main class="flex-grow flex flex-col items-center justify-center p-4 border-2 border-gray-300">
+    <div id="grid" class="grid grid-cols-3 gap-4 rounded-md p-4 w-96">
+
+    </div>
+</main>
 
 
+<footer class="bg-gray-100 p-4 flex justify-center gap-4">
+    <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Play Again?</button>
+    <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Reset</button>
+</footer>
 
 <script src="form.js"></script>
 </body>
