@@ -56,8 +56,31 @@ function flipCard(card){
 
 
 function checkMatch(){
+    const [card1, card2] = flippedCards;
+
+    if(card1.dataset.value === card2.dataset.value){
+        matchedCards+2;
+        flippedCards = []
+
+        if(matchedCards === cards.length){
+            setTimeout(() => alert('You won!'), 500)
+        }
+    } else {
+        lockBoard = true
+        setTimeout(() => {
+            flippedCards.forEach(card => (card.textContent = '?'))
+            flippedCards = []
+            lockBoard = false
+        }, 1000)
+    }
 
 }
+
+playBtn.addEventListener('click', createCards)
+resetBtn.addEventListener('click', () => {
+    createCards()
+    alert('Game Reset')
+})
 
 
 createCards()
