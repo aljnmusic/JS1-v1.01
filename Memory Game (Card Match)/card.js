@@ -59,7 +59,7 @@ function checkMatch(){
     const [card1, card2] = flippedCards;
 
     if(card1.dataset.value === card2.dataset.value){
-        matchedCards+2;
+        matchedCards += 2;
         flippedCards = []
 
         if(matchedCards === cards.length){
