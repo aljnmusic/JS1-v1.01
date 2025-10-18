@@ -84,9 +84,10 @@ Please make sure to update tests as appropriate and follow the existing code sty
 
 ---
 
-## License
+## 📄 License
 
-This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](./LICENSE).
+
 
 ---
 
