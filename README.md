@@ -9,7 +9,7 @@ This repository contains several JavaScript projects that I've created to practi
 ### 🎴 Memory Game (Card Match)
 ![Memory Game Screenshot](https://via.placeholder.com/600x300?text=Memory+Game+Screenshot)  
 A simple memory card matching game where you flip cards and try to find pairs.  
-[Live Demo](https://yourusername.github.io/JS1-v1.01/MemoryGame/) | [Source Code](https://github.com/aljnmusic/JS1-v1.01/tree/main/MemoryGame)
+[Live Demo](https://aljnmusic.github.io/JS1-v1.01/MemoryGame/) | [Source Code](https://github.com/aljnmusic/JS1-v1.01/tree/main/MemoryGame)
 
 ---
 
