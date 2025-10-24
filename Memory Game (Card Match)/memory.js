@@ -17,7 +17,7 @@ function createCards(){
     cards = shuffleCards([...cardsData, ...cardsData])
     gridEl.innerHTML = ''
 
-    cards.forEach(card => {
+    cards.forEach(() => {
         const card = document.createElement('div')
         card.className = 'bg-gray-200 h-24 flex items-center justify-center cursor-pointer rounded shadow select-none'
         card.textContent = '?'
@@ -29,4 +29,32 @@ function createCards(){
     flippedCards = []
     matchedCards = 0
     lockBoard = false
+}
+
+function flipCard(){
+    if(lockBoard){
+        return
+    }
+
+    if(flippedCards.includes(card)){
+        return
+    }
+
+    if(card.textContent !== '?'){
+        return
+    }
+
+    const value = card.dataset.value
+
+    if(value.endsWith('.jpg') || value.endsWith('.png')){
+        card.innerHTML = `<img src=${value} class="h-full w-full object-cover rounded" alt="card images" />`
+    } else {
+        card.textContent = '?'
+    }
+
+    flippedCards.push(card)
+
+    if(card.length === 2){
+        checkMatch()
+    }
 }
