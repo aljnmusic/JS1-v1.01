@@ -8,3 +8,7 @@ let cards = []
 let flippedCards = []
 let matchedCards = 0
 let lockBoard = false
+
+function shuffleCards(array){
+    return array.sort(() => Math.random() - 0.5)
+}
