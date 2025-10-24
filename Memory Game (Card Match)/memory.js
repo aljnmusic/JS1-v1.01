@@ -73,3 +73,11 @@ function checkMatch(){
         )
     }
 }
+
+playBtn.addEventListener('click', createCards)
+resetBtn.addEventListener('click', () => {
+    createCards()
+    alert("Game Reset!")
+})
+
+createCards()
