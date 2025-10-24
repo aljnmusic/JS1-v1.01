@@ -44,8 +44,8 @@ function flipCard(card){
         return
     }
 
-    const value = card.dataset.value
-    flippedCards.push(value)
+    card.textContent = card.dataset.value
+    flippedCards.push(card)
 
     if(flippedCards.length === 2){
         checkMatch()
@@ -54,13 +54,13 @@ function flipCard(card){
 }
 
 function checkMatch(){
-    const { card1 , card2 } = flippedCards
+    const [ card1 , card2 ] = flippedCards
 
     if(card1.dataset.value === card2.dataset.value){
         matchedCards += 2
         flippedCards = []
 
-        if(matchedCards.length === cards.length){
+        if(matchedCards === cards.length){
             setTimeout(() => alert('You won'), 500)
         }
     } else {
