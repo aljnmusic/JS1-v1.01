@@ -50,8 +50,6 @@ function flipCard(card){
     if(flippedCards.length === 2){
         checkMatch()
     }
-
-
 }
 
 
