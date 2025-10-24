@@ -28,6 +28,7 @@ function createCards(){
     flippedCards = []
     matchedCards = 0
     lockBoard = false
+
 }
 
 function flipCard(){
