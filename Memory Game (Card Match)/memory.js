@@ -40,6 +40,7 @@ function flipCard(){
 
     if(flippedCards.includes(card)){
         return
+
     }
 
     if(card.textContent !== '?'){
