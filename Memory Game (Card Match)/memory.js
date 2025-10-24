@@ -30,3 +30,26 @@ function createCards(){
     matchedCards = 0
     lockBoard = false
 }
+
+function flipCard(card){
+    if(lockBoard){
+        return
+    }
+
+    if(flippedCards.includes(card)){
+        return
+    }
+
+    if(card.textContent !== '?'){
+        return
+    }
+
+    const value = card.dataset.value
+    flippedCards.push(value)
+
+    if(flippedCards.length === 2){
+        checkMatch()
+    }
+
+
+}
