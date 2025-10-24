@@ -11,8 +11,8 @@ Weather App - done 9/29
 Movie Search App - done 10 / 2
 Currency Converter - done 10 / 6
 Form Validation App - done 10 / 10
-Drum Kit / Piano App
-Memory Game (Card Match)
+Drum Kit / Piano App - done 10 / 12
+Memory Game (Card Match) - done 10 /15
 Typing Speed Test
 Recipe Finder
 Bookmark Manager
