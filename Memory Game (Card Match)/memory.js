@@ -22,7 +22,7 @@ function createCards(){
         card.className = 'bg-gray-200 h-24 flex items-center justify-center cursor-pointer rounded shadow select-none'
         card.textContent = '?'
         card.dataset.value = value
-        card.addEventListener('click', flipCard())
+        card.addEventListener('click', () => flipCard(card))
         gridEl.appendChild(card)
     })
 
