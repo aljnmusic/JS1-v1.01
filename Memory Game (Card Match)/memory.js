@@ -22,15 +22,12 @@ function createCards(){
         card.className = 'bg-gray-200 h-24 flex items-center justify-center cursor-pointer rounded shadow select-none'
         card.textContent = '?'
         card.dataset.value = value
-        card.addEventListener('click', () => flipCard(card))
         gridEl.appendChild(card)
     })
 
     flippedCards = []
     matchedCards = 0
     lockBoard = false
-
-
 }
 
 function flipCard(){
@@ -40,7 +37,6 @@ function flipCard(){
 
     if(flippedCards.includes(card)){
         return
-
     }
 
     if(card.textContent !== '?'){
@@ -60,10 +56,4 @@ function flipCard(){
     if(card.length === 2){
         checkMatch()
     }
-}
-
-function checkMatch(){
-    const { card1, card2 } = flippedCards;
-
-
 }
