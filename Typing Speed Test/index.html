@@ -16,11 +16,12 @@
 
 
 <main class="flex-grow flex flex-col p-4 border-2 border-gray-300">
-    <div id="sentence" class="rounded h-56 w-full flex items-center justify-center text-center border-2 border-gray-300 p-4 text-black font-bold">
+    <div id="sentence" class="rounded h-56 w-full text-center border-2 border-gray-300 p-4 text-black font-bold whitespace-normal break-words overflow-auto">
 
     </div>
 
-    <textarea type="text" id="typing-area" class="rounded h-56 w-full border-2 mt-4 border-gray-300 font-bold text-black overflow-y auto-break font-bold">
+
+    <textarea type="text" id="typing-area" class="rounded h-32 w-full border-2 mt-4 border-gray-300 font-bold text-black overflow-y auto-break font-bold overflow-auto">
 
 
     </textarea>
@@ -38,7 +39,7 @@
 </main>
 
 
-<footer class="bg-gray-100 p-4 flex justify-center gap-4">
+<footer class="bg-gray-100 p-3 flex justify-center gap-2">
     <button id="play" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Play Again?</button>
     <button id="reset" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Reset</button>
 </footer>
