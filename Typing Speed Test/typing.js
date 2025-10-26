@@ -24,11 +24,11 @@ function renderTestParagraph(paragraph) {
 
     paragraph.split("").forEach(char => {
         const charSpan = document.createElement("span");
-        charSpan.innerText = char;
-        charSpan.dataset.value = char;
+        charSpan.innerText = char
+        charSpan.dataset.value = char
 
         if (char === " ") {
-            charSpan.innerHTML = "\u00A0"; // Unicode for &nbsp;
+            charSpan.innerHTML = "\u00A0"
         }
 
         sentenceEl.appendChild(charSpan);
@@ -41,3 +41,20 @@ function getParagraph(){
 
 const paragraph = getParagraph()
 renderTestParagraph(paragraph)
+
+typingArea.addEventListener('input', (event)=>{
+    event.preventDefault();
+
+    console.log(event.target.value)
+    const spans = sentenceEl.querySelectorAll('span')
+    const typed = typingArea.value
+
+    for(let i = 0; i < typed.length; i++){
+        if(typed[i] === spans[i].innerText){
+            spans[i].style.color = "green"
+        }
+        else{
+            spans[i].style.color = "red"
+        }
+    }
+})
