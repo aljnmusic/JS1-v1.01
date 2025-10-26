@@ -22,7 +22,6 @@ function renderTestParagraph(paragraph) {
 
     sentenceEl.innerHTML = "";
 
-
     paragraph.split("").forEach(char => {
         const charSpan = document.createElement("span");
         charSpan.innerText = char;
