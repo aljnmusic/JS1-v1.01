@@ -18,34 +18,27 @@ const paragraphs = [
     "Time management is one of the most important skills for personal and professional success. Learning how to prioritize tasks, set realistic goals, and avoid procrastination allows you to make the most of your day. Even small improvements in managing your time can lead to greater productivity and less stress."
 ];
 
-// function renderTestParagraph() {
-//     const selectedParagraph = paragraphs[Math.floor(Math.random() * paragraphs.length)];
-//
-//     // Clear previous content
-//     sentenceEl.innerHTML = "";
-//
-//     // Loop through each character
-//     selectedParagraph.split("").forEach(char => {
-//         const charSpan = document.createElement("span");
-//         charSpan.innerText = char;
-//         charSpan.dataset.value = char;
-//
-//         // Use non-breaking space for spaces
-//         if (char === " ") {
-//             charSpan.innerHTML = "\u00A0"; // Unicode for &nbsp;
-//         }
-//
-//         sentenceEl.appendChild(charSpan);
-//     });
-// }
-//
-//
-// renderTestParagraph()
+function renderTestParagraph(paragraph) {
 
-function getParagraph(){
-    const selectedParagraph = paragraphs[Math.floor(Math.random() * paragraphs.length)]
+    sentenceEl.innerHTML = "";
 
-    sentenceEl.textContent = selectedParagraph
+
+    paragraph.split("").forEach(char => {
+        const charSpan = document.createElement("span");
+        charSpan.innerText = char;
+        charSpan.dataset.value = char;
+
+        if (char === " ") {
+            charSpan.innerHTML = "\u00A0"; // Unicode for &nbsp;
+        }
+
+        sentenceEl.appendChild(charSpan);
+    })
 }
 
-getParagraph()
+function getParagraph(){
+    return paragraphs[Math.floor(Math.random() * paragraphs.length)]
+}
+
+const paragraph = getParagraph()
+renderTestParagraph(paragraph)
