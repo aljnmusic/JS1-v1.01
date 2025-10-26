@@ -15,16 +15,18 @@
 </header>
 
 
-<main class="flex-grow flex flex-col lg:flex-row lg:gap-4 p-4 border-2 border-gray-300">
-    <div id="sentence" class="rounded h-56 w-full text-center border-2 border-gray-300 p-4 text-black font-bold whitespace-normal break-words overflow-auto text-2xl">
+<main class="flex-grow flex flex-col lg:flex-col lg:gap-4 p-4 border-2 border-gray-300">
+    <div class="flex flex-col lg:flex-row lg:w-full lg:justify-between">
+        <div id="sentence" class="rounded h-56 w-full text-center border-2 border-gray-300 p-4 text-black font-bold whitespace-normal break-words overflow-auto text-2xl">
 
+        </div>
+
+        <textarea
+                id="typing-area"
+                class="rounded h-32 w-full border-2 mt-4 lg:mt-0 lg:h-56 border-gray-300 font-bold text-black overflow-auto text-left align-top text-2xl p-4"
+                placeholder="Start typing now..."
+        ></textarea>
     </div>
-
-    <textarea
-            id="typing-area"
-            class="rounded h-32 w-full border-2 mt-4 lg:mt-0 lg:h-56 border-gray-300 font-bold text-black overflow-auto text-left align-top text-2xl p-4"
-            placeholder="Start typing now..."
-    ></textarea>
 
 
 
@@ -32,8 +34,8 @@
 
 <!--    </div>-->
 
-    <p id="timer">
-
+    <p id="timer" class="w-full text-center text-2xl h-10 border-2 border-gray-300 font-bold font-mono text-xl">
+        Remaining Time: 10s
     </p>
 
     <p id="result">

@@ -39,8 +39,13 @@ function getParagraph(){
     return paragraphs[Math.floor(Math.random() * paragraphs.length)]
 }
 
+
 const paragraph = getParagraph()
 renderTestParagraph(paragraph)
+
+let isRunning = false;
+let timeLeft = 10;
+
 
 typingArea.addEventListener('input', (event)=>{
     event.preventDefault();
@@ -56,5 +61,21 @@ typingArea.addEventListener('input', (event)=>{
         else{
             spans[i].style.color = "red"
         }
+    }
+
+
+
+    if(!isRunning){
+        const intervalId = setInterval(() => {
+            timeLeft--
+            timerEl.textContent = `Remaining Time: ${timeLeft}s`;
+
+            if(timeLeft <= 0){
+                isRunning = false;
+                typingArea.disabled = true;
+                clearInterval(intervalId);
+            }
+        }, 1000)
+        isRunning = true;
     }
 })
