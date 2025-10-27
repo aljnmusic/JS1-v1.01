@@ -34,19 +34,21 @@
 
 <!--    </div>-->
 
-    <p id="timer" class="w-full text-center text-2xl h-10 border-2 border-gray-300 font-bold font-mono text-xl text-blue-600">
-        Remaining Time: 15s
-    </p>
+    <div class="w-full flex justify-center items-center flex-col">
+        <p id="timer" class="w-1/4 text-center text-2xl h-10 border-2 border-blue-300 rounded bg-blue-50 font-bold font-mono text-xl text-blue-600">
+            Remaining Time: 15s
+        </p>
 
-    <p id="result" class="w-full text-center text-2xl h-10 border-2 border-gray-300 font-bold font-mono text-xl hidden">
+        <p id="result" class="w-1/2 text-center text-2xl h-10 border-2 border-blue-300 rounded font-bold font-mono text-xl hidden text-blue-600 mt-4 bg-blue-50">
 
-    </p>
+        </p>
+    </div>
 </main>
 
 
 <footer class="bg-gray-100 p-3 flex justify-center gap-2">
-    <button id="play" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Play Again?</button>
-    <button id="reset" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Reset</button>
+    <button id="play" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Type Again?</button>
+    <button id="reset" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 w-32">Reset</button>
 </footer>
 
 <script src="typing.js"></script>
