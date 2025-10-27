@@ -44,7 +44,7 @@ const paragraph = getParagraph()
 renderTestParagraph(paragraph)
 
 let isRunning = false;
-let timeLeft = 10;
+let timeLeft = 15;
 let correct = 0
 let correctChar = 0;
 let totalTyped;
@@ -63,7 +63,7 @@ typingArea.addEventListener('input', (event)=>{
 
     for(let i = 0; i < typed.length; i++){
         if(typed[i] === spans[i].innerText){
-            spans[i].style.color = "green"
+            spans[i].style.color = "yellow"
         }
         else{
             spans[i].style.color = "red"
@@ -89,15 +89,16 @@ typingArea.addEventListener('input', (event)=>{
                 correctChar = 0
 
                 for(let i = 0; i < finaltyped.length; i++){
-                    if(finaltyped[i] === spans[i].innerText){
+                    if(finaltyped[i] === finalspans[i].innerText){
                         correctChar++
                     }
                 }
 
                 totalTyped = finaltyped.length
                 accuracy = (correctChar / totalTyped) * 100
-                timeSpent = 10 - timeLeft
+                timeSpent = 60 - timeLeft
                 wpm = (correctChar / 5) / (timeSpent / 60)
+                result.classList.remove("hidden")
                 resultEl.innerHTML = `Words Per Minute: ${Math.floor(wpm)}
                                       Accuracy: ${Math.floor(accuracy)}`
             }
