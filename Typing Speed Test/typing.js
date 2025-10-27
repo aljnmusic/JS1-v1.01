@@ -45,6 +45,12 @@ renderTestParagraph(paragraph)
 
 let isRunning = false;
 let timeLeft = 10;
+let correct = 0
+let correctChar = 0;
+let totalTyped;
+let accuracy;
+let timeSpent;
+let wpm;
 
 
 typingArea.addEventListener('input', (event)=>{
@@ -53,6 +59,7 @@ typingArea.addEventListener('input', (event)=>{
     console.log(event.target.value)
     const spans = sentenceEl.querySelectorAll('span')
     const typed = typingArea.value
+
 
     for(let i = 0; i < typed.length; i++){
         if(typed[i] === spans[i].innerText){
@@ -74,6 +81,25 @@ typingArea.addEventListener('input', (event)=>{
                 isRunning = false;
                 typingArea.disabled = true;
                 clearInterval(intervalId);
+
+                const finalspans = sentenceEl.querySelectorAll('span')
+                const finaltyped = typingArea.value
+
+
+                correctChar = 0
+
+                for(let i = 0; i < finaltyped.length; i++){
+                    if(finaltyped[i] === spans[i].innerText){
+                        correctChar++
+                    }
+                }
+
+                totalTyped = finaltyped.length
+                accuracy = (correctChar / totalTyped) * 100
+                timeSpent = 10 - timeLeft
+                wpm = (correctChar / 5) / (timeSpent / 60)
+                resultEl.innerHTML = `Words Per Minute: ${Math.floor(wpm)}
+                                      Accuracy: ${Math.floor(accuracy)}`
             }
         }, 1000)
         isRunning = true;
