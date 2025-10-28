@@ -113,6 +113,9 @@ newEl.addEventListener('click', (event) =>{
 
     const paragraph = getParagraph()
     renderTestParagraph(paragraph)
+    typingArea.value = ''
+    resultEl.innerHTML = ''
+    typingArea.disabled = false;
 })
 
 resetBtn.addEventListener('click', (event) => {
@@ -126,4 +129,5 @@ resetBtn.addEventListener('click', (event) => {
     timerEl.textContent = `Remaining Time: ${timeLeft}s`;
     isRunning = false;
     resultEl.innerHTML = ''
+    typingArea.disabled = false;
 })
