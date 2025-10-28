@@ -59,6 +59,7 @@ typingArea.addEventListener('input', (event)=>{
     console.log(event.target.value)
     const spans = sentenceEl.querySelectorAll('span')
     const typed = typingArea.value
+    newEl.disabled = true
 
 
     for(let i = 0; i < typed.length; i++){
@@ -111,6 +112,8 @@ typingArea.addEventListener('input', (event)=>{
 newEl.addEventListener('click', (event) =>{
     event.preventDefault();
 
+    newEl.disabled = false
+
     const paragraph = getParagraph()
     renderTestParagraph(paragraph)
     typingArea.value = ''
@@ -130,4 +133,5 @@ resetBtn.addEventListener('click', (event) => {
     isRunning = false;
     resultEl.innerHTML = ''
     typingArea.disabled = false;
+    newEl.disabled = false
 })
