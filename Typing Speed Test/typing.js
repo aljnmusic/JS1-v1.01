@@ -45,12 +45,12 @@ renderTestParagraph(paragraph)
 
 let isRunning = false;
 let timeLeft = 15;
-let correct = 0
 let correctChar = 0;
 let totalTyped;
 let accuracy;
 let timeSpent;
 let wpm;
+let intervalId
 
 
 typingArea.addEventListener('input', (event)=>{
@@ -73,7 +73,7 @@ typingArea.addEventListener('input', (event)=>{
 
 
     if(!isRunning){
-        const intervalId = setInterval(() => {
+        intervalId = setInterval(() => {
             timeLeft--
             timerEl.textContent = `Remaining Time: ${timeLeft}s`;
 
@@ -113,4 +113,17 @@ newEl.addEventListener('click', (event) =>{
 
     const paragraph = getParagraph()
     renderTestParagraph(paragraph)
+})
+
+resetBtn.addEventListener('click', (event) => {
+    event.preventDefault()
+
+    typingArea.value = ''
+    const paragraph = getParagraph()
+    renderTestParagraph(paragraph)
+    clearInterval(intervalId)
+    timeLeft = 15
+    timerEl.textContent = `Remaining Time: ${timeLeft}s`;
+    isRunning = false;
+    resultEl.innerHTML = ''
 })
