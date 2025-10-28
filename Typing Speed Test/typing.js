@@ -2,7 +2,7 @@ let sentenceEl = document.getElementById('sentence')
 let typingArea = document.getElementById('typing-area')
 let timerEl = document.getElementById('timer')
 let resultEl = document.getElementById('result')
-let playEl = document.getElementById('play')
+let newEl = document.getElementById('new')
 let resetBtn = document.getElementById('reset')
 
 
@@ -105,4 +105,12 @@ typingArea.addEventListener('input', (event)=>{
         }, 1000)
         isRunning = true;
     }
+})
+
+
+newEl.addEventListener('click', (event) =>{
+    event.preventDefault();
+
+    const paragraph = getParagraph()
+    renderTestParagraph(paragraph)
 })
