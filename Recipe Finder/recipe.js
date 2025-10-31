@@ -17,10 +17,28 @@ async function fetchRecipes() {
     try {
         const response = await fetch(url);
         const data = await response.json();
-        console.log(data);
+        displayRecipe(data)
+        console.log(data)
     } catch (error) {
         console.log(error);
     }
+}
+
+function displayRecipe(data) {
+    displayEl.className = 'p-4'
+
+    displayEl.innerHTML = ''
+
+    if(!data.meals){
+        displayEl.textContent = 'No recipe have been found.'
+        return
+    }
+
+    data.meals.forEach(meal => {
+        let p = document.createElement('p')
+        p.textContent = meal.strMeal
+        displayEl.appendChild(p)
+    })
 }
 
 searchBtn.addEventListener('click', fetchRecipes);
