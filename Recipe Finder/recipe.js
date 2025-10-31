@@ -1,0 +1,5 @@
+let recipe = document.getElementById('recipeName')
+let searchBtn = document.getElementById('search')
+let clearBtn = document.getElementById('clear')
+let mainGrid = document.getElementById('main')
+let displayEl = document.getElementById('recipesDisplay')

@@ -12,13 +12,17 @@
 
     <div class="w-full flex flex-row p-2 gap-1 bg-gray-100">
         <input type="text" placeholder="Recipe Name" id="recipeName" class="w-96 rounded">
-        <button class="bg-green-500 w-32 rounded">Search</button>
-        <button class="w-32 bg-red-600 rounded">Clear</button>
+        <button class="bg-green-500 w-32 rounded" id="search">Search</button>
+        <button class="w-32 bg-red-600 rounded" id="clear">Clear</button>
     </div>
 
-    <main class="flex flex-grow bg-blue-100">
+    <main class="flex flex-grow bg-blue-100" id="main">
+        <div id="recipesDisplay">
 
+        </div>
     </main>
 
+
+    <script src="recipe.js"></script>
 </body>
 </html>
