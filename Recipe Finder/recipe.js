@@ -25,9 +25,12 @@ async function fetchRecipes() {
 }
 
 function displayRecipe(data) {
-    displayEl.className = 'p-4'
+    displayEl.className = 'p-4 bg-red-100 '
 
     displayEl.innerHTML = ''
+
+
+    // instruction.className = 'mt-2'
 
     if(!data.meals){
         displayEl.textContent = 'No recipe have been found.'
@@ -35,10 +38,18 @@ function displayRecipe(data) {
     }
 
     data.meals.forEach(meal => {
-        let p = document.createElement('p')
-        p.textContent = meal.strMeal
-        displayEl.appendChild(p)
+        let name = document.createElement('p')
+        // let instruction = document.createElement('p')
+
+        name.textContent = `${meal.strMeal}`
+        // instruction.textContent = `Instruction: ${meal.strInstructions}`
+        displayEl.appendChild(name)
+        // displayEl.appendChild(instruction)
     })
 }
 
 searchBtn.addEventListener('click', fetchRecipes);
+
+
+//when name is clicked must display the recipe
+//must create a function showFullRecipe() to display full recipe after clicked and call that function inside the loop with event listener
