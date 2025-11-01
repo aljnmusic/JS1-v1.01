@@ -16,12 +16,15 @@ async function fetchRecipes() {
 
     try {
         const response = await fetch(url);
-        const data = await response.json();
+        const data = await response.json()
+        allMenu = data;
         displayRecipe(data)
         console.log(data)
     } catch (error) {
         console.log(error);
     }
+
+
 }
 
 function displayRecipe(data) {
@@ -52,20 +55,38 @@ function displayRecipe(data) {
             const selectedMeal = data.meals.find(m => m.idMeal === meal_id)
 
             showFullRecipe(selectedMeal)
+
         })
     })
 }
+
+let allMenu = null
 
 function showFullRecipe(meal) {
     console.log(meal.strMeal);          // name
     console.log(meal.strInstructions);
 
+
     let mealName = document.createElement('p')
     let instruction =  document.createElement('p')
+    let backBtn = document.createElement('button')
+    let backContainer = document.createElement('div')
 
+    backContainer.style.display = 'flex'
+    backContainer.style.justifyContent = 'flex-start'
+    backContainer.appendChild(backBtn)
+    backBtn.className = 'bg-red-500 w-32 border rounded p-1'
+    backBtn.textContent = 'Back To Meals'
     mealName.textContent = `${meal.strMeal}`
     instruction.textContent = `${meal.strInstructions}`
 
+    displayEl.innerHTML = ''
+
+    backBtn.addEventListener('click', (event) => {
+        displayRecipe(allMenu)
+    })
+
+    displayEl.appendChild(backContainer)
     displayEl.appendChild(mealName)
     displayEl.appendChild(instruction)
 }
