@@ -25,12 +25,10 @@ async function fetchRecipes() {
 }
 
 function displayRecipe(data) {
-    displayEl.className = 'p-4 bg-red-100 '
+    displayEl.className = 'p-4 w-full text-center'
 
     displayEl.innerHTML = ''
 
-
-    // instruction.className = 'mt-2'
 
     if(!data.meals){
         displayEl.textContent = 'No recipe have been found.'
@@ -39,16 +37,15 @@ function displayRecipe(data) {
 
     data.meals.forEach(meal => {
         let name = document.createElement('p')
-        // let instruction = document.createElement('p')
 
+        name.className = 'my-2 p-2 border-2 rounded bg-white'
         name.textContent = `${meal.strMeal}`
-        // instruction.textContent = `Instruction: ${meal.strInstructions}`
         displayEl.appendChild(name)
-        // displayEl.appendChild(instruction)
     })
 }
 
 searchBtn.addEventListener('click', fetchRecipes);
+recipe.addEventListener('keydown', fetchRecipes);
 
 
 //when name is clicked must display the recipe
