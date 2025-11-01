@@ -38,10 +38,36 @@ function displayRecipe(data) {
     data.meals.forEach(meal => {
         let name = document.createElement('p')
 
-        name.className = 'my-2 p-2 border-2 rounded bg-white'
+        name.className = 'my-2 p-2 border-2 rounded bg-white hover:bg-red-50'
         name.textContent = `${meal.strMeal}`
+        name.dataset.value = meal.idMeal
         displayEl.appendChild(name)
+
+        name.addEventListener(`click`, (event) => {
+            event.preventDefault()
+
+            const meal_id = event.target.dataset.value
+            console.log(meal_id)
+
+            const selectedMeal = data.meals.find(m => m.idMeal === meal_id)
+
+            showFullRecipe(selectedMeal)
+        })
     })
+}
+
+function showFullRecipe(meal) {
+    console.log(meal.strMeal);          // name
+    console.log(meal.strInstructions);
+
+    let mealName = document.createElement('p')
+    let instruction =  document.createElement('p')
+
+    mealName.textContent = `${meal.strMeal}`
+    instruction.textContent = `${meal.strInstructions}`
+
+    displayEl.appendChild(mealName)
+    displayEl.appendChild(instruction)
 }
 
 searchBtn.addEventListener('click', fetchRecipes);
