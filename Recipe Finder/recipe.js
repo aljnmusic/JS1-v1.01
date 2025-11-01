@@ -69,6 +69,8 @@ function showFullRecipe(meal) {
 
     let mealName = document.createElement('p')
     let instruction =  document.createElement('p')
+
+    instruction.innerHTML = meal.strInstructions.replace(/\r\n|\n/g, '<br><br>');
     let backBtn = document.createElement('button')
     let backContainer = document.createElement('div')
 
@@ -77,8 +79,13 @@ function showFullRecipe(meal) {
     backContainer.appendChild(backBtn)
     backBtn.className = 'bg-red-500 w-32 border rounded p-1'
     backBtn.textContent = 'Back To Meals'
-    mealName.textContent = `${meal.strMeal}`
-    instruction.textContent = `${meal.strInstructions}`
+
+    mealName.className = 'mb-2 mt-2 text-left'
+    mealName.textContent = `Meal: ${meal.strMeal}`
+
+    instruction.className = 'text-left '
+    // instruction.textContent = `${meal.strInstructions}`
+
 
     displayEl.innerHTML = ''
 
