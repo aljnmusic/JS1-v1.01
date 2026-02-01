@@ -41,23 +41,23 @@ longBreakBtn.addEventListener('click', () => {
 })
 
 function focusUI(){
-    focusBtn.style.backgroundColor = '#991b1b'
-    startBtn.style.backgroundColor = 'white'
-    startBtn.style.color = 'black'
+    focusBtn.style.backgroundColor = colors.red
+    startBtn.style.backgroundColor = colors.white
+    startBtn.style.color = colors.black
     setButtonStyle(pauseBtn, true)
 }
 
 function shortBreakIU(){
-    shortBreakBtn.style.backgroundColor = 'green'
-    startBtn.style.backgroundColor = 'white'
-    startBtn.style.color = 'black'
+    shortBreakBtn.style.backgroundColor = colors.green
+    startBtn.style.backgroundColor = colors.white
+    startBtn.style.color = colors.black
     setButtonStyle(pauseBtn, true)
 }
 
 function longBreakUI(){
-    longBreakBtn.style.backgroundColor = 'red'
-    startBtn.style.backgroundColor = 'white'
-    startBtn.style.color = 'black'
+    longBreakBtn.style.backgroundColor = colors.red
+    startBtn.style.backgroundColor = colors.white
+    startBtn.style.color = colors.black
     setButtonStyle(pauseBtn, true)
 }
 
@@ -166,7 +166,8 @@ const colors = {
     textGray: '#e5e7eb',
     black: 'black',
     white: 'white',
-    red: 'red'
+    red: 'red',
+    green: 'green'
 }
 
 function setButtonStyle(btn, withText = false, textColor = colors.textGray){
