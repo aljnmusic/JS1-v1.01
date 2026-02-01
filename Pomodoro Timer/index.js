@@ -15,8 +15,6 @@ let seconds
 let interval
 
 
-
-
 focusBtn.addEventListener('click', () => {
     currentMode = 'focus'
     timeEl.textContent = '25:00'
