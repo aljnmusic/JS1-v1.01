@@ -151,10 +151,10 @@ pauseBtn.addEventListener('click', () => {
 })
 
 function pauseTimer(){
-    pauseBtn.style.backgroundColor = 'white'
-    pauseBtn.style.color = 'black'
-    startBtn.style.backgroundColor = '#6b7280'
-    startBtn.style.color = '#e5e7eb'
+    setButtonStyle(pauseBtn, colors.white)
+    setButtonStyle(pauseBtn, true, colors.black)
+    setButtonStyle(startBtn)
+    setButtonStyle(startBtn, true)
     startBtn.textContent = 'RESUME'
     clearInterval(interval)
     interval = null
@@ -166,23 +166,23 @@ resetBtn.addEventListener('click', () => {
 
 const colors = {
     bgGray: '#6b7280',
-    textGray: '#e5e7eb'
+    textGray: '#e5e7eb',
+    black: 'black',
+    white: 'white'
 }
 
-function resetButtonStyle(btn, withText = false){
+function setButtonStyle(btn, withText = false, textColor = colors.textGray){
     btn.style.backgroundColor = colors.bgGray
-    if(withText) btn.style.color = colors.textGray
+    if(withText) btn.style.color = textColor
 }
 
 function resetTimer(){
     timeEl.textContent = '00:00'
-    resetButtonStyle(startBtn)
-    resetButtonStyle(startBtn, true)
-    resetButtonStyle(focusBtn)
-    resetButtonStyle(shortBreakBtn)
-    resetButtonStyle(longBreakBtn)
-    resetButtonStyle(resetBtn)
-    resetButtonStyle(pauseBtn, true)
+    setButtonStyle(startBtn, true)
+    setButtonStyle(focusBtn)
+    setButtonStyle(shortBreakBtn)
+    setButtonStyle(longBreakBtn)
+    setButtonStyle(pauseBtn, true)
     clearInterval(interval)
     interval = null
 
