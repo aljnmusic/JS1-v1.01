@@ -54,6 +54,14 @@ function shortBreakIU(){
     pauseBtn.style.color = '#e5e7eb'
 }
 
+function longBreakUI(){
+    longBreakBtn.style.backgroundColor = 'red'
+    startBtn.style.backgroundColor = 'white'
+    startBtn.style.color = 'black'
+    pauseBtn.style.backgroundColor = '#6b7280'
+    pauseBtn.style.color = '#e5e7eb'
+}
+
 startBtn.addEventListener('click', () => {
     if (currentMode === 'focus') {
         if(!interval) {
@@ -79,11 +87,7 @@ startBtn.addEventListener('click', () => {
     } else if(currentMode === 'longBreak'){
         if(!interval){
             interval = setInterval(longBreakTimer, 1000)
-            longBreakBtn.style.backgroundColor = 'red'
-            startBtn.style.backgroundColor = 'white'
-            startBtn.style.color = 'black'
-            pauseBtn.style.backgroundColor = '#6b7280'
-            pauseBtn.style.color = '#e5e7eb'
+            longBreakUI()
             focusBtn.disabled = true
             shortBreakBtn.disabled = true
 
