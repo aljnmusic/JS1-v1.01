@@ -14,6 +14,14 @@ let minutes
 let seconds
 let interval
 
+const bgGray = '#6b7280'
+const textGray = '#e5e7eb'
+
+function setButtonStyle(btn, withText = false){
+    btn.style.backgroundColor = bgGray;
+    if(withText) btn.style.color = textGray;
+}
+
 
 focusBtn.addEventListener('click', () => {
     currentMode = 'focus'
