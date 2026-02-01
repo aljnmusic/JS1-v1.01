@@ -14,10 +14,13 @@ let minutes
 let seconds
 let interval
 
+function setTimerText(text){
+    timeEl.textContent = text
+}
 
 focusBtn.addEventListener('click', () => {
     currentMode = 'focus'
-    timeEl.textContent = '25:00'
+    setTimerText('25:00')
     FocusTimeLeft = 1500
     pauseBtn.disabled = true
 
@@ -25,14 +28,14 @@ focusBtn.addEventListener('click', () => {
 
 shortBreakBtn.addEventListener('click', () => {
     currentMode = 'shortBreak'
-    timeEl.textContent = '5:00'
+    setTimerText('5:00')
     shortBreakLeft = 300
     pauseBtn.disabled = true
 })
 
 longBreakBtn.addEventListener('click', () => {
     currentMode = 'longBreak'
-    timeEl.textContent = '10:00'
+    setTimerText('10:00')
     longBreakLeft = 300
     pauseBtn.disabled = true
 
