@@ -176,13 +176,13 @@ function resetButtonStyle(btn, withText = false){
 
 function resetTimer(){
     timeEl.textContent = '00:00'
-    startBtn.style.backgroundColor = '#6b7280'
-    startBtn.style.color = '#e5e7eb'
-    focusBtn.style.backgroundColor = '#6b7280'
-    shortBreakBtn.style.backgroundColor = '#6b7280'
-    longBreakBtn.style.backgroundColor = '#6b7280'
-    pauseBtn.style.backgroundColor = '#6b7280'
-    pauseBtn.style.color = '#e5e7eb'
+    resetButtonStyle(startBtn)
+    resetButtonStyle(startBtn, true)
+    resetButtonStyle(focusBtn)
+    resetButtonStyle(shortBreakBtn)
+    resetButtonStyle(longBreakBtn)
+    resetButtonStyle(resetBtn)
+    resetButtonStyle(pauseBtn, true)
     clearInterval(interval)
     interval = null
 
