@@ -17,52 +17,48 @@ let interval
 
 focusBtn.addEventListener('click', () => {
     currentMode = 'focus'
-
-    // focusBtn.style.backgroundColor = '#991b1b'
     timeEl.textContent = '25:00'
     FocusTimeLeft = 1500
-
     pauseBtn.disabled = true
 
-    // shortBreakBtn.disabled = true
-    // longBreakBtn.disabled = true
-    // focusBtn.disabled = true
 })
 
 shortBreakBtn.addEventListener('click', () => {
     currentMode = 'shortBreak'
-    // shortBreakBtn.style.backgroundColor = 'green'
-
     timeEl.textContent = '5:00'
     shortBreakLeft = 300
-
     pauseBtn.disabled = true
-    // focusBtn.disabled = true
-    // longBreakBtn.disabled = true
-    // shortBreakBtn.disabled = true
 })
 
 longBreakBtn.addEventListener('click', () => {
     currentMode = 'longBreak'
-    // longBreakBtn.style.backgroundColor = 'red'
     timeEl.textContent = '10:00'
     longBreakLeft = 300
-
     pauseBtn.disabled = true
-    // focusBtn.disabled = true
-    // shortBreakBtn.disabled = true
-    // longBreakBtn.disabled = true
+
 })
+
+function focusUI(){
+    focusBtn.style.backgroundColor = '#991b1b'
+    startBtn.style.backgroundColor = 'white'
+    startBtn.style.color = 'black'
+    pauseBtn.style.backgroundColor = '#6b7280'
+    pauseBtn.style.color = '#e5e7eb'
+}
+
+function shortBreakIU(){
+    shortBreakBtn.style.backgroundColor = 'green'
+    startBtn.style.backgroundColor = 'white'
+    startBtn.style.color = 'black'
+    pauseBtn.style.backgroundColor = '#6b7280'
+    pauseBtn.style.color = '#e5e7eb'
+}
 
 startBtn.addEventListener('click', () => {
     if (currentMode === 'focus') {
         if(!interval) {
             interval = setInterval(FocusTimer, 1000)
-            focusBtn.style.backgroundColor = '#991b1b'
-            startBtn.style.backgroundColor = 'white'
-            startBtn.style.color = 'black'
-            pauseBtn.style.backgroundColor = '#6b7280'
-            pauseBtn.style.color = '#e5e7eb'
+            focusUI()
             shortBreakBtn.disabled = true
             longBreakBtn.disabled = true
 
@@ -73,11 +69,7 @@ startBtn.addEventListener('click', () => {
     } else if(currentMode === 'shortBreak'){
         if(!interval){
             interval = setInterval(shortBreakTimer, 1000)
-            shortBreakBtn.style.backgroundColor = 'green'
-            startBtn.style.backgroundColor = 'white'
-            startBtn.style.color = 'black'
-            pauseBtn.style.backgroundColor = '#6b7280'
-            pauseBtn.style.color = '#e5e7eb'
+            shortBreakIU()
             focusBtn.disabled = true
             longBreakBtn.disabled = true
 
