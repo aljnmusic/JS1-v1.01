@@ -46,7 +46,7 @@ longBreakBtn.addEventListener('click', () => {
 })
 
 function focusUI(){
-    focusBtn.style.backgroundColor = colors.red
+    focusBtn.style.backgroundColor = colors.blue
     startBtn.style.backgroundColor = colors.white
     startBtn.style.color = colors.black
     setButtonStyle(pauseBtn, true)
@@ -172,7 +172,8 @@ const colors = {
     black: 'black',
     white: 'white',
     red: 'red',
-    green: 'green'
+    green: 'green',
+    blue: 'blue'
 }
 
 function setButtonStyle(btn, withText = false, textColor = colors.textGray){
