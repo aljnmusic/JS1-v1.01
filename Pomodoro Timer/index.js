@@ -18,8 +18,12 @@ function setTimerText(text){
     timeEl.textContent = text
 }
 
+function currentModeState(text){
+    currentMode = text
+}
+
 focusBtn.addEventListener('click', () => {
-    currentMode = 'focus'
+    currentModeState('focus')
     setTimerText('25:00')
     FocusTimeLeft = 1500
     pauseBtn.disabled = true
@@ -27,14 +31,14 @@ focusBtn.addEventListener('click', () => {
 })
 
 shortBreakBtn.addEventListener('click', () => {
-    currentMode = 'shortBreak'
+    currentModeState('shortBreak')
     setTimerText('5:00')
     shortBreakLeft = 300
     pauseBtn.disabled = true
 })
 
 longBreakBtn.addEventListener('click', () => {
-    currentMode = 'longBreak'
+    currentModeState('longBreak')
     setTimerText('10:00')
     longBreakLeft = 300
     pauseBtn.disabled = true
