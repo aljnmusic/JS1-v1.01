@@ -14,13 +14,7 @@ let minutes
 let seconds
 let interval
 
-const bgGray = '#6b7280'
-const textGray = '#e5e7eb'
 
-function setButtonStyle(btn, withText = false){
-    btn.style.backgroundColor = bgGray;
-    if(withText) btn.style.color = textGray;
-}
 
 
 focusBtn.addEventListener('click', () => {
@@ -169,6 +163,16 @@ function pauseTimer(){
 resetBtn.addEventListener('click', () => {
     resetTimer()
 })
+
+const colors = {
+    bgGray: '#6b7280',
+    textGray: '#e5e7eb'
+}
+
+function resetButtonStyle(btn, withText = false){
+    btn.style.backgroundColor = colors.bgGray
+    if(withText) btn.style.color = colors.textGray
+}
 
 function resetTimer(){
     timeEl.textContent = '00:00'
